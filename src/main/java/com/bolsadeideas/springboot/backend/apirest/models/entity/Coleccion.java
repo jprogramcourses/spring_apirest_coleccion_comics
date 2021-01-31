@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "colecciones")
@@ -17,6 +19,10 @@ public class Coleccion {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idColeccion;
+	
+	@NotEmpty(message="No puede estar vacío")
+	@Size(min=3, max=30, message="el tamaño tiene que estar entre 3 y 30 caracteres")
+	@Column(nullable = false, unique=true)
 	private String nombre;
 	
 	@Column(name = "num_totales")
