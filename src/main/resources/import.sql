@@ -14,9 +14,17 @@ INSERT INTO clientes (nombre, apellido, email, create_at) VALUES('Jade', 'Doe', 
 
 INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at) VALUES('Los Vengadores', 130, 120, '2021-01-24');
 INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at) VALUES('Capitán América', 130, 120, '2021-01-24');
-INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at) VALUES('Star Wars', 12, 12, '2021-01-24');
+INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at) VALUES('Thor', 12, 12, '2021-01-24');
 INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at) VALUES('Spiderman', 130, 120, '2021-01-24');
 INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at) VALUES('Daredevil', 130, 120, '2021-01-24');
 INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at) VALUES('IronMan', 130, 120, '2021-01-24');
 INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at) VALUES('Capitán América - Thor', 130, 120, '2021-01-24');
 INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at) VALUES('Los Nuevos Vengadores', 130, 120, '2021-01-24');
+INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at) VALUES('La Visión y la Bruja Escarlata', 130, 120, '2021-01-24');
+INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at) VALUES('Secret Wars', 130, 120, '2021-01-24');
+INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at) VALUES('Secret Wars II', 12, 12, '2021-01-24');
+INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at) VALUES('Los 4 Fantásticos', 130, 120, '2021-01-24');
+INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at) VALUES('Clásicos Marvel', 130, 120, '2021-01-24');
+INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at) VALUES('Marvel Heroes', 130, 120, '2021-01-24');
+INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at) VALUES('What if?', 130, 120, '2021-01-24');
+INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at) VALUES('Hulk', 130, 120, '2021-01-24');

@@ -9,8 +9,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+
 
 @Entity
 @Table(name = "colecciones")
@@ -30,18 +35,22 @@ public class Coleccion {
 	@Column(name = "num_disponibles")
 	private int numerosDisponibles;
 	
+	@NotNull(message="debe indicar una fecha")
 	@Column(name = "create_at")
+	@Temporal(TemporalType.DATE)
 	private Date createAt;
 	
-	@PrePersist
-	public void prePersist() {
-		createAt = new Date();
-	}
+	private String imagen;
+	
+//	@PrePersist
+//	public void prePersist() {
+//		createAt = new Date();
+//	}
 	
 	// Transformar a listado de objeto Comic
 //	@Column(name = "list_num_disp")
 //	private List<Integer> listadoNumerosDisponible;
-	
+
 	public Coleccion() {
 		super();
 	}
@@ -84,6 +93,14 @@ public class Coleccion {
 
 	public void setCreateAt(Date createAt) {
 		this.createAt = createAt;
+	}
+	
+	public String getImagen() {
+		return imagen;
+	}
+
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
 	}
 	
 //	public List<Integer> getListadoNumerosDisponible() {
