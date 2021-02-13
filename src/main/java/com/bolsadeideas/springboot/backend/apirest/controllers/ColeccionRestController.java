@@ -35,6 +35,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.bolsadeideas.springboot.backend.apirest.models.entity.Coleccion;
+import com.bolsadeideas.springboot.backend.apirest.models.entity.Creador;
 import com.bolsadeideas.springboot.backend.apirest.models.service.IColeccionService;
 import com.bolsadeideas.springboot.backend.apirest.models.service.IUploadFileService;
 
@@ -142,6 +143,7 @@ public class ColeccionRestController {
 			coleccionToUpdate.setNombre(coleccion.getNombre());
 			coleccionToUpdate.setNumerosTotales(coleccion.getNumerosTotales());
 			coleccionToUpdate.setNumerosDisponibles(coleccion.getNumerosDisponibles());
+			coleccionToUpdate.setCreador(coleccion.getCreador());
 			coleccionUpdated = coleccionService.save(coleccionToUpdate);
 		} catch (DataAccessException e) {
 			response.put("mensaje", "Error al realizar al intentar actualizar en la base de datos");
@@ -230,6 +232,11 @@ public class ColeccionRestController {
 		cabecera.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + recurso.getFilename() + "\"");
 		
 		return new ResponseEntity<Resource>(recurso, cabecera, HttpStatus.OK);
+	}
+	
+	@GetMapping("/colecciones/creadores")
+	public List<Creador> listarCreadores(){
+		return coleccionService.findAllCreadores();
 	}
 
 }

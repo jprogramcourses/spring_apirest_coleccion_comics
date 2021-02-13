@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.bolsadeideas.springboot.backend.apirest.models.dao.IColeccionDao;
 import com.bolsadeideas.springboot.backend.apirest.models.entity.Coleccion;
+import com.bolsadeideas.springboot.backend.apirest.models.entity.Creador;
 
 @Service
 public class ColeccionServiceImpl implements IColeccionService {
@@ -56,6 +57,12 @@ public class ColeccionServiceImpl implements IColeccionService {
 		Coleccion coleccionToUpdate = coleccionDao.findById(coleccion.getIdColeccion()).orElse(null);
 		
 		return coleccionDao.save(coleccion);
+	}
+
+	@Override
+	@Transactional(readOnly=true)
+	public List<Creador> findAllCreadores() {
+		return coleccionDao.findAllCreadores();
 	}
 
 }

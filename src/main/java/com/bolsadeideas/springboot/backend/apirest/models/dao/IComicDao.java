@@ -6,11 +6,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import com.bolsadeideas.springboot.backend.apirest.models.entity.Coleccion;
-import com.bolsadeideas.springboot.backend.apirest.models.entity.Creador;
+import com.bolsadeideas.springboot.backend.apirest.models.entity.Comic;
 
-public interface IColeccionDao extends JpaRepository<Coleccion, Integer> {
+public interface IComicDao extends JpaRepository<Comic, Long> {
 	
-	@Query("from Creador")
-	public List<Creador> findAllCreadores();
+	@Query("from Coleccion")
+	public List<Coleccion> findAllColecciones();
 
 }

@@ -6,6 +6,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import com.bolsadeideas.springboot.backend.apirest.models.entity.Coleccion;
+import com.bolsadeideas.springboot.backend.apirest.models.entity.Creador;
 
 public interface IColeccionService {
 	
@@ -20,5 +21,7 @@ public interface IColeccionService {
 	public void delete(Integer idColeccion);
 	
 	public Coleccion update(Coleccion coleccion);
+	
+	public List<Creador> findAllCreadores();
 
 }
