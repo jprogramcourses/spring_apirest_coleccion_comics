@@ -31,3 +31,13 @@ INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at, creado
 INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at, creador_id) VALUES('Marvel Heroes', 130, 120, '2021-01-24', 1);
 INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at, creador_id) VALUES('What if?', 130, 120, '2021-01-24', 1);
 INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at, creador_id) VALUES('Hulk', 130, 120, '2021-01-24', 1);
+
+INSERT INTO usuarios (username, password, enabled, nombre, apellido, email) VALUES ('juan', '$2a$10$y.obikPLlNFJkG6cH3EQYugA7Tnh0lGw1AgBwrPW5gpgfST2MCkN2', 1, 'Juan', 'Díaz', 'juan@mail.com')
+INSERT INTO usuarios (username, password, enabled, nombre, apellido, email) VALUES ('admin', '$2a$10$pNxlTutkJCaGIZXI16hFjON.sZH0LM.CZFasrAIH.HB0uD8t.kf4C', 1, 'Admin', 'Admin', 'admin@mail.com');
+
+INSERT INTO roles (nombre) VALUES ('ROLE_USER');
+INSERT INTO roles (nombre) VALUES ('ROLE_ADMIN');
+
+INSERT INTO usuarios_roles (usuario_id, role_id) VALUES (1, 1);
+INSERT INTO usuarios_roles (usuario_id, role_id) VALUES (2, 1);
+INSERT INTO usuarios_roles (usuario_id, role_id) VALUES(2, 2);

@@ -20,6 +20,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -69,6 +70,7 @@ public class ColeccionRestController {
 	// Spring tiene la clase ResponseEntity que permite enviar en la respuesta el
 	// mensaje de error y
 	// el objeto
+	@Secured({"ROLE_ADMIN", "ROLE_USER"})
 	@GetMapping("/colecciones/{idColeccion}")
 	public ResponseEntity<?> getColeccion(@PathVariable Integer idColeccion) {
 		Coleccion coleccion = null;
@@ -90,6 +92,7 @@ public class ColeccionRestController {
 		return new ResponseEntity<Coleccion>(coleccion, HttpStatus.OK);
 	}
 
+	@Secured("ROLE_ADMIN")
 	@PostMapping("/colecciones")
 	@ResponseStatus(HttpStatus.CREATED)
 	public ResponseEntity<?> create(@Valid @RequestBody Coleccion coleccion, BindingResult result) {
@@ -123,6 +126,7 @@ public class ColeccionRestController {
 		return new ResponseEntity<Map<String, Object>>(response, HttpStatus.ACCEPTED);
 	}
 
+	@Secured("ROLE_ADMIN")
 	@PutMapping("/colecciones/{idColeccion}")
 	@ResponseStatus(HttpStatus.CREATED)
 	public ResponseEntity<?> update(@Valid @RequestBody Coleccion coleccion, BindingResult result, @PathVariable Integer idColeccion) {
@@ -163,6 +167,7 @@ public class ColeccionRestController {
 		return new ResponseEntity<Map<String, Object>>(response, HttpStatus.CREATED);
 	}
 
+	@Secured("ROLE_ADMIN")
 	@DeleteMapping("/colecciones/{idColeccion}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public ResponseEntity<?> delete(@PathVariable Integer idColeccion) {
@@ -186,6 +191,7 @@ public class ColeccionRestController {
 		return new ResponseEntity<Map<String, Object>>(response, HttpStatus.ACCEPTED);
 	}
 	
+	@Secured({"ROLE_ADMIN", "ROLE_USER"})
 	@PostMapping("/colecciones/upload")
 	public ResponseEntity<?> uploadImage(@RequestParam("archivo") MultipartFile archivo, @RequestParam("id") Integer id){
 		Map<String, Object> response = new HashMap<>();
@@ -234,6 +240,7 @@ public class ColeccionRestController {
 		return new ResponseEntity<Resource>(recurso, cabecera, HttpStatus.OK);
 	}
 	
+	@Secured("ROLE_ADMIN")
 	@GetMapping("/colecciones/creadores")
 	public List<Creador> listarCreadores(){
 		return coleccionService.findAllCreadores();

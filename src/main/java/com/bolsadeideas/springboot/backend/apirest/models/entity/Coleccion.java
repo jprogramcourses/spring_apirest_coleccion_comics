@@ -48,7 +48,7 @@ public class Coleccion {
 	
 	@NotNull(message="El creador no puede estar vacío")
 	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn
+	@JoinColumn(name="creador_id")
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	private Creador creador;
 	
