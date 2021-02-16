@@ -1,5 +1,5 @@
-INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('MarÌa', 'Sanchez', 'maria@correo.es', '2019-11-11');
-INSERT INTO clientes (nombre, apellido, email, create_at) VALUES('AndrÈs', 'Guzm·n', 'profesor@bolsadeideas.com', '2018-01-01');
+INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Mar√≠a', 'Sanchez', 'maria@correo.es', '2019-11-11');
+INSERT INTO clientes (nombre, apellido, email, create_at) VALUES('Andr√©s', 'Guzm√°n', 'profesor@bolsadeideas.com', '2018-01-01');
 INSERT INTO clientes (nombre, apellido, email, create_at) VALUES('Mr. John', 'Doe', 'john.doe@gmail.com', '2018-01-02');
 INSERT INTO clientes (nombre, apellido, email, create_at) VALUES('Linus', 'Torvalds', 'linus.torvalds@gmail.com', '2018-01-03');
 INSERT INTO clientes (nombre, apellido, email, create_at) VALUES('Rasmus', 'Lerdorf', 'rasmus.lerdorf@gmail.com', '2018-01-04');
@@ -16,23 +16,23 @@ INSERT INTO creadores (id, nombre) VALUES (1, 'Stan Lee');
 INSERT INTO creadores (id, nombre) VALUES (2, 'Jack Kirby');
 
 INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at, creador_id) VALUES('Los Vengadores', 130, 120, '2021-01-24', 1);
-INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at, creador_id) VALUES('Capitan AmÈrica', 130, 120, '2021-01-24', 1);
+INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at, creador_id) VALUES('Capit√°n Am√©rica', 130, 120, '2021-01-24', 1);
 INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at, creador_id) VALUES('Thor', 12, 12, '2021-01-24', 1);
 INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at, creador_id) VALUES('Spiderman', 130, 120, '2021-01-24', 1);
 INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at, creador_id) VALUES('Daredevil', 130, 120, '2021-01-24', 1);
 INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at, creador_id) VALUES('IronMan', 130, 120, '2021-01-24', 1);
-INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at, creador_id) VALUES('Capit·n AmÈrica - Thor', 130, 120, '2021-01-24', 1);
+INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at, creador_id) VALUES('Capit√°n Am√©rica - Thor', 130, 120, '2021-01-24', 1);
 INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at, creador_id) VALUES('Los Nuevos Vengadores', 130, 120, '2021-01-24', 1);
-INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at, creador_id) VALUES('La VisiÛn y la Bruja Escarlata', 130, 120, '2021-01-24', 1);
+INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at, creador_id) VALUES('La Visi√≥n y la Bruja Escarlata', 130, 120, '2021-01-24', 1);
 INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at, creador_id) VALUES('Secret Wars', 130, 120, '2021-01-24', 1);
 INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at, creador_id) VALUES('Secret Wars II', 12, 12, '2021-01-24', 1);
-INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at, creador_id) VALUES('Los 4 Fant·sticos', 130, 120, '2021-01-24', 1);
-INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at, creador_id) VALUES('Cl·sicos Marvel', 130, 120, '2021-01-24', 1);
+INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at, creador_id) VALUES('Los 4 Fant√°sticos', 130, 120, '2021-01-24', 1);
+INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at, creador_id) VALUES('Cl√°sicos Marvel', 130, 120, '2021-01-24', 1);
 INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at, creador_id) VALUES('Marvel Heroes', 130, 120, '2021-01-24', 1);
 INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at, creador_id) VALUES('What if?', 130, 120, '2021-01-24', 1);
 INSERT INTO colecciones (nombre, num_totales, num_disponibles, create_at, creador_id) VALUES('Hulk', 130, 120, '2021-01-24', 1);
 
-INSERT INTO usuarios (username, password, enabled, nombre, apellido, email) VALUES ('juan', '$2a$10$y.obikPLlNFJkG6cH3EQYugA7Tnh0lGw1AgBwrPW5gpgfST2MCkN2', 1, 'Juan', 'DÌaz', 'juan@mail.com')
+INSERT INTO usuarios (username, password, enabled, nombre, apellido, email) VALUES ('juan', '$2a$10$y.obikPLlNFJkG6cH3EQYugA7Tnh0lGw1AgBwrPW5gpgfST2MCkN2', 1, 'Juan', 'D√≠az', 'juan@mail.com')
 INSERT INTO usuarios (username, password, enabled, nombre, apellido, email) VALUES ('admin', '$2a$10$pNxlTutkJCaGIZXI16hFjON.sZH0LM.CZFasrAIH.HB0uD8t.kf4C', 1, 'Admin', 'Admin', 'admin@mail.com');
 
 INSERT INTO roles (nombre) VALUES ('ROLE_USER');

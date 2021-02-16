@@ -23,10 +23,10 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 	public void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
 			.antMatchers(HttpMethod.GET, "/apicolec/colecciones", "/apicolec/colecciones/page/**", "/apicolec/uploads/img/**", "/images/**").permitAll()
-//			.antMatchers(HttpMethod.GET, "/apicolec/colecciones/{idColeccion}").hasAnyRole("USER", "ADMIN")
-//			.antMatchers(HttpMethod.POST, "/apicolec/colecciones/upload").hasAnyRole("USER", "ADMIN")
-//			.antMatchers(HttpMethod.POST, "/apicolec/colecciones").hasRole("ADMIN")
-//			.antMatchers("/apicolec/colecciones/**").hasRole("ADMIN")
+			.antMatchers(HttpMethod.GET, "/apicolec/colecciones/{idColeccion}").hasAnyRole("USER", "ADMIN")
+			.antMatchers(HttpMethod.POST, "/apicolec/colecciones/upload").hasAnyRole("USER", "ADMIN")
+			.antMatchers(HttpMethod.POST, "/apicolec/colecciones").hasRole("ADMIN")
+			.antMatchers("/apicolec/colecciones/**").hasRole("ADMIN")
 			.anyRequest().authenticated()
 			.and().cors().configurationSource(corsConfigurationSource());
 	}
